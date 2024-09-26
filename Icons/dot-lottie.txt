@@ -1,0 +1,8 @@
+<dotlottie-player src="https://lottie.host/713ec648-ad52-4124-ab0f-4778ed25802b/YNUmUIFkml.json"
+    background="transparent" speed="0.9" loop autoplay></dotlottie-player>
+
+<dotlottie-player src="https://lottie.host/713ec648-ad52-4124-ab0f-4778ed25802b/YNUmUIFkml.json"
+    background="transparent" speed="0.5" loop autoplay></dotlottie-player>
+
+<dotlottie-player src="https://lottie.host/713ec648-ad52-4124-ab0f-4778ed25802b/YNUmUIFkml.json"
+    background="transparent" speed="0.7" loop autoplay></dotlottie-player>

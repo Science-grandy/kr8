@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+/* Custom Styles */
+:root {
+  --red: #f00001;
+  --blue: #0084d7;
+  --green: #61bf33;
+  --yellow: #f29901;
+  --lightyellow: #ecad41;
+  --lighteryellow: #fffaf2;
+
+  --border-lighterash: rgba(0, 0, 0, 0.03125);
+  --border-lightash: rgba(0, 0, 0, 0.0625);
+  --border-ash: rgba(0, 0, 0, 0.125);
+  --bg-ash: #f8f9fa;
+  --bg-lightash: #fafafa;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+*,
+html,
+body {
+  font-family: "Mulish", sans-serif;
+}
+.container-fluid {
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+p,
+.list {
+  font-size: 1rem;
+  margin: 0;
+}
+.btn {
+  border: none;
+  padding: 8px 20px !important;
+  border-radius: 5px;
+}
+
+.bg-primary,
+.btn-primary {
+  background: #0084d7 !important;
+}
+/* button#outline-btn:hover {
+  color: #0084d7;
+  background: rgba(0, 0, 0, 0.05) !important;
+} */
+.btn:focus,
+a:focus,
+a,
+.btn {
+  border: none;
+  outline: none;
+}
+nav {
+  padding: 10px !important;
+  border-bottom: 1px solid var(--border-lightash);
+}
+section {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+/* Heading Styling */
+.heading-div {
+  position: relative;
+  padding: 7px 0;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.heading-div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--yellow);
+}
+.heading-div h3 {
+  margin: 0;
+}
+
+/* Navbar Styling */
+.navbar-toggler {
+  padding: 0 !important;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler:focus,
+.btn:focus,
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+.navbar {
+  justify-content: space-between;
+}
+.navbar-nav a {
+  padding: 15px 0;
+}
+
+.collapse {
+  flex-grow: 0.05;
+}
+/*Hero Section*/
+.hero-section {
+  background-color: var(--blue);
+  background-image: url("images/blue-background.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: auto;
+  padding: 100px 12px !important;
+}
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 60px 12px !important;
+  }
+}
+.hero-section .container {
+  width: 100%;
+  height: 100%;
+}
+.hero-text {
+  width: 60%;
+}
+@media screen and (max-width: 768px) {
+  .hero-text {
+    width: 100%;
+  }
+}
+.hero-section .hero-text h1 {
+  text-align: left !important;
+  font-size: 54px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 768px) {
+  .hero-section .hero-text h1 {
+    font-size: 44px;
+  }
+}
+.hero-text h1 span {
+  position: relative;
+  text-shadow: 2px 2px 24px rgba(255, 255, 255, 0.8);
+}
+.hero-text h1 span::before {
+  display: none;
+  content: " ";
+  position: absolute;
+  width: 113%;
+  height: 60%;
+  bottom: 4px;
+  left: -3%;
+  background-color: var(--yellow);
+  z-index: -1;
+}
+.hero-section .hero-text p {
+  text-align: left !important;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #f6f6f6;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+.hero-section .btn {
+  background-color: var(--yellow) !important;
+  color: black !important;
+  border-color: var(--yellow);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease;
+}
+.hero-section .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* About Section */
+.about-section {
+  padding-top: 80px !important;
+}
+.about-section .btn {
+  padding: 5px 10px !important;
+  color: var(--blue) !important;
+  background-color: var(--bg-lightash);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.about-section .btn:hover {
+  background-color: var(--border-lighterash);
+}
+
+/* Services Section */
+.services-section {
+}
+.services-section .row {
+  align-items: flex-start !important;
+  justify-content: space-between;
+  padding: 25px 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.services-section .row:first-child {
+  padding-top: 0 !important;
+}
+.services-section .row .box {
+  height: 300px;
+  overflow: hidden;
+  background-color: var(--bg-ash);
+}
+.services-section .row h5 {
+  font-weight: bold;
+}
+.services-section .row p {
+  margin-bottom: 20px;
+}
+.services-section .row img {
+  display: none;
+}
+.services-section .row .see-more {
+  border: none;
+  color: var(--blue) !important;
+  padding: 7px 10px !important;
+  border-radius: 5px;
+  background-color: var(--bg-lightash);
+}
+.services-section .row .see-more:hover {
+  background-color: var(--border-lighterash);
+}
+
+/*FAQ Section */
+.faq-section {
+}
+
+/* Accordion Item Styling */
+.accordion-item {
+  background-color: var(--bg-lightash);
+  border: none; /* Removes border around accordion items */
+  margin-bottom: 1rem; /* Space between each accordion item */
+  border-radius: 5px; /* Rounded corners for accordion items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* Accordion Header Styling */
+.accordion-header {
+  background-color: #ffffff; /* White background for accordion headers */
+  border-radius: 5px; /* Rounded corners for headers */
+  text-align: left;
+}
+.accordion-button {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007bff; /* Bootstrap primary blue */
+  background-color: transparent; /* Transparent background */
+  padding: 1rem; /* Extra padding for larger clickable area */
+  border: none;
+  outline: none;
+}
+.accordion-button:focus {
+  box-shadow: none; /* Removes focus outline */
+  outline: none;
+}
+.accordion-button:not(.collapsed) {
+  color: #ffffff; /* White text when expanded */
+  background-color: #007bff; /* Bootstrap primary blue background */
+}
+.accordion-button::after {
+  color: #007bff; /* Chevron color */
+}
+.accordion-body {
+  background-color: #ffffff; /* White background for content */
+  padding: 1.5rem; /* Extra padding for content area */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555; /* Medium gray for text */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* CTA Section */
+.cta-section {
+  background-image: url("your-background-image.jpg"); /* Optional: Add a background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+}
+
+.cta-section .btn {
+  background-color: var(--yellow) !important;
+  color: black !important;
+  border-color: var(--yellow);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease;
+}
+.cta-section .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Section */
+.footer-section {
+  margin: 0;
+  padding: 20px;
+}
+footer.container {
+  width: 100%;
+  padding: 0 !important;
+}
+footer.container .row {
+  width: auto;
+}
+
+/* Contact Section */
+/* General Section Styling */
+.contact-section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding-top: 3rem !important;
+  }
+}
+
+.contact-section .up h2 {
+  font-size: 51px;
+}
+@media screen and (max-width: 768px) {
+  .contact-section .up h2 {
+    font-size: 33px;
+  }
+}
+
+.contact-section .down .socials {
+  position: relative;
+  width: fit-content;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--bg-lightash);
+}
+.contact-section .down .socials::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: var(--blue);
+}
+.contact-section .social-icons-div {
+  width: auto;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.contact-section .social-icons-div span {
+  overflow: hidden;
+  padding: 3px;
+}
+.contact-section .social-icons-div span:hover {
+  border-radius: 10px;
+  background-color: var(--border-ash);
+}
+.contact-section .social-icons-div span svg {
+  width: 40px;
+  height: 40px;
+}
+.contact-section .address iframe {
+  border-radius: 10px;
+}
+
+/* Form Group Styling */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-control,
+.form-select,
+textarea {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: #0084d7;
+  box-shadow: none;
+}
+
+/* Label styling for input placeholders */
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  font-size: 16px;
+  background-color: white;
+  padding: 0 5px;
+  color: #aaa;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.form-control:focus ~ label,
+.form-control:not(:placeholder-shown) ~ label,
+.form-select:focus ~ label,
+.form-select:not(:disabled):not([value=""]) ~ label,
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  color: #0084d7;
+}
+
+/* Dropdown Options Styling */
+.form-select option {
+  padding: 10px;
+  background-color: white;
+  color: #333;
+}
+
+/* Hover Styling for Options */
+.form-select option:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+/* Checkbox Group Styling */
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Custom Checkbox Styling */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-ash);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.custom-checkbox input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.custom-checkbox label {
+  display: inline-block;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"]:focus {
+  outline: none;
+  border-color: none;
+}
+/* Checkbox error message */
+.checkbox-err-msg {
+  color: red;
+  font-size: 14px;
+}
+
+/* Error Styling */
+.form-control.touched:invalid,
+.form-select.touched:invalid {
+  border-color: #f00001;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* Submit Button */
+#submit-btn {
+  background-color: #f29901;
+  border-color: #f29901;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#submit-btn:active {
+  background-color: rgba(242, 153, 1, 0.8);
+  color: #fff;
+}
+
+#submit-btn:disabled {
+  background-color: rgba(242, 153, 1, 0.6);
+  cursor: not-allowed;
+}
+
+#submit-btn.requesting {
+  opacity: 0.6;
+  pointer-events: none;
+}
